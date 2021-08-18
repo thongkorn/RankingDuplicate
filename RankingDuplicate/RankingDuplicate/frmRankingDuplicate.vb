@@ -95,7 +95,7 @@ Public Class frmRankingDuplicate
         Dim count As Integer = 1
         For i As Integer = 0 To rankingDt.Rows.Count - 2
             rankingDt.Rows(i)("Ranking") = rank
-            '// If not duplicate value then increment +1.
+            '// If current row and next row not duplicate value then increment +1.
             If rankingDt.Rows(i)(fld).ToString() <> rankingDt.Rows(i + 1)(fld).ToString() Then
                 rank += 1
                 rank = count + 1
